@@ -1,0 +1,130 @@
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+<link  rel="icon"   href="img/petro-icon.png" type="image/png" />
+<script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/jQueryMask/dist/jquery.mask.min.js"></script>
+<script type="text/javascript" src="js/core.js"></script>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script data-ad-client="ca-pub-9497093833649813" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+
+
+
+
+
+<div class="row">
+	<div class="col-sm-12">
+		<h5 align='center'>CALCULADORA COMPRA - VENTA PTR/VES PATRIA</h5>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<h5 align='center'>TASA OFICIAL PTR : <span id='ptr'></span> </h5>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<h5 align='center'>COMISION PTR AL CANCELAR: <span id='comision_cancelar_ptr'></span> PTR / <span id='comision_cancelar_bs'></span> BS</h5>
+	</div>
+</div>
+
+
+<form>
+<div class="row">
+<!-- COMPRA !-->
+<div class="col-sm-6" style='background-color:#d7f4a0'>
+  <div class="form-group">
+    <label>TIPO</label>
+    <input name='tipo_c' id='tipo_c' class="form-control form-control-sm" value='COMPRA' readonly='readonly' />
+  </div>
+
+  <div class="form-group">
+    <label>PTR</label>
+    <input name='cantidad_c' id='cantidad_c' class="form-control form-control-sm" />
+  </div>
+
+  <div class="form-group">
+    <label>TASA</label>
+    <input name='tasa_c' id='tasa_c'  class="form-control form-control-sm" />
+  </div>
+
+  <div class="form-group">
+    <label>CANTIDAD BS</label>
+    <input name='cantidad_bs_c' id='cantidad_bs_c' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>COMISION PTR</label>
+    <input name='comision_c' id='comision_c' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>CANTIDAD PTR</label>
+    <input name='cantidad_ptr_c' id='cantidad_ptr_c' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+</div>
+<!-- COMPRA !-->
+
+<!-- VENTA !-->
+<div class="col-sm-6" style='background-color:#a0e2f4'>
+  <div class="form-group">
+    <label>TIPO</label>
+    <input name='tipo_v' id='tipo_v' class="form-control form-control-sm" value='VENTA' readonly='readonly' />
+  </div>
+
+  <div class="form-group">
+    <label>PTR</label>
+    <input name='cantidad_v' id='cantidad_v' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>TASA</label>
+    <input name='tasa_v' id='tasa_v' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>CANTIDAD BS</label>
+    <input name='cantidad_bs_v' id='cantidad_bs_v' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>COMISION BS</label>
+    <input name='comision_v' id='comision_v' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+
+  <div class="form-group">
+    <label>CANTIDAD BS - COMISON</label>
+    <input name='cantidad_bs_final_v' id='cantidad_bs_final_v' readonly='readonly' class="form-control form-control-sm"/>
+  </div>
+</div>
+<!-- VENTA !-->
+</div>
+</form>
+
+
+<table border='1' align='center' class="table table-bordered"" >
+
+<tr>
+<td colspan='6'>Ganancia: <b><span id='ganancia'></span> BS</b></td>
+</tr>
+
+</table>
+
+<div id='foot' style='text-align:center'>Telegram: @telemendigar</div>
+
+
+
+</div>
+
+
+</body>
+</html>
