@@ -39,6 +39,7 @@ function number_format (number, decimals, dec_point, thousands_sep) {
 }
 
 var comision_ptr=0.00040000;
+var comision_pacto=0.05;
 
 // CONSULTA PETRO OFICIAL
 // https://petroapp-price.petro.gob.ve/price
@@ -65,7 +66,7 @@ $("#cantidad_c").keyup(function() {
 	if($("#tasa_c").val()!="" && $(this).val()!="" && $(this).val()!=0 && $("#tasa_c").val()!=0){
 // CALCULO DE PTR A OBTENER
 	$('#cantidad_bs_c').val(number_format(redondear($("#cantidad_c").val()*limpiar($("#tasa_c").val())),2,',','.'));
-	$('#comision_c').val($("#cantidad_c").val()*0.0025);
+	$('#comision_c').val($("#cantidad_c").val()*comision_pacto);
 	$('#cantidad_ptr_c').val($("#cantidad_c").val()-$('#comision_c').val());
 // CALCULO DE PTR A OBTENER
 
@@ -81,7 +82,7 @@ $("#cantidad_c").keyup(function() {
 	while(sin_ganancia){
 		tasa_temp=tasa_temp+100;
 		bs_venta_temp=$('#cantidad_v').val()*tasa_temp;
-		comision_venta=bs_venta_temp*0.0025;
+		comision_venta=bs_venta_temp*comision_pacto;
 		ganancia=bs_venta_temp-comision_venta;
 		if(ganancia>limpiar($('#cantidad_bs_c').val())){
 			$('#tasa_v').val(number_format(tasa_temp,2,',','.'));
@@ -112,7 +113,7 @@ $("#tasa_c").keyup(function() {
 	if($("#cantidad_c").val()!="" && $(this).val()!="" && $(this).val()!=0 && $("#cantidad_c").val()!=0){
 // CALCULO DE PTR A OBTENER
 	$('#cantidad_bs_c').val(number_format($("#cantidad_c").val()*limpiar($("#tasa_c").val()),2,',','.'));
-	$('#comision_c').val($("#cantidad_c").val()*0.0025);
+	$('#comision_c').val($("#cantidad_c").val()*comision_pacto);
 	$('#cantidad_ptr_c').val($("#cantidad_c").val()-$('#comision_c').val());
 // CALCULO DE PTR A OBTENER
 
@@ -128,7 +129,7 @@ $("#tasa_c").keyup(function() {
 	while(sin_ganancia){
 		tasa_temp=tasa_temp+100;
 		bs_venta_temp=$('#cantidad_v').val()*tasa_temp;
-		comision_venta=bs_venta_temp*0.0025;
+		comision_venta=bs_venta_temp*comision_pacto;
 		ganancia=bs_venta_temp-comision_venta;
 		if(ganancia>limpiar($('#cantidad_bs_c').val())){
 			$('#tasa_v').val(number_format(tasa_temp,2,',','.'));
@@ -155,7 +156,7 @@ $("#tasa_c").keyup(function() {
 $("#cantidad_v").keyup(function() {
 	if($("#tasa_v").val()!="" && $("#tasa_v").val()!=0){
 		$('#cantidad_bs_v').val(number_format( redondear($('#cantidad_v').val()*limpiar($("#tasa_v").val())),2,',','.') );
-		$('#comision_v').val(number_format( redondear(limpiar($('#cantidad_bs_v').val())*0.0025),2,',','.'));
+		$('#comision_v').val(number_format( redondear(limpiar($('#cantidad_bs_v').val())*comision_pacto),2,',','.'));
 		$('#cantidad_bs_final_v').val(number_format( redondear(limpiar($('#cantidad_bs_v').val())-limpiar($('#comision_v').val())),2,',','.'));
 		if(limpiar($('#cantidad_bs_final_v').val())-limpiar($('#cantidad_bs_c').val())>0){
 			$("#ganancia").css("color", "green");
@@ -170,7 +171,7 @@ $("#cantidad_v").keyup(function() {
 $("#tasa_v").keyup(function() {
 	if($("#cantidad_v").val()!="" && $("#cantidad_v").val()!=0){
 		$('#cantidad_bs_v').val(number_format(redondear($('#cantidad_v').val()*limpiar($("#tasa_v").val())),2,',','.'));
-		$('#comision_v').val(number_format(redondear(limpiar($('#cantidad_bs_v').val())*0.0025),2,',','.'));
+		$('#comision_v').val(number_format(redondear(limpiar($('#cantidad_bs_v').val())*comision_pacto),2,',','.'));
 		$('#cantidad_bs_final_v').val(number_format(redondear(limpiar($('#cantidad_bs_v').val())-limpiar($('#comision_v').val())),2,',','.'));
 		if(limpiar($('#cantidad_bs_final_v').val())-limpiar($('#cantidad_bs_c').val())>0){
 			$("#ganancia").css("color", "green");
