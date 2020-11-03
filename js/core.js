@@ -38,7 +38,7 @@ function number_format (number, decimals, dec_point, thousands_sep) {
     return s.join(dec);
 }
 
-var comision_ptr=0.00005000;
+var comision_ptr=0.00040000;
 
 // CONSULTA PETRO OFICIAL
 // https://petroapp-price.petro.gob.ve/price
