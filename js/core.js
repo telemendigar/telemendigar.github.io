@@ -39,7 +39,7 @@ function number_format (number, decimals, dec_point, thousands_sep) {
 }
 
 var comision_ptr=0.00040000;
-var comision_pacto=0.05;
+var comision_pacto=0.005;
 
 // CONSULTA PETRO OFICIAL
 // https://petroapp-price.petro.gob.ve/price
